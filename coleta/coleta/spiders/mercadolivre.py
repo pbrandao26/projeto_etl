@@ -12,7 +12,7 @@ class MercadolivreSpider(scrapy.Spider):
         for prouct in products:
             
             yield{
-            'brand':products.css('span.ui-search-item__brand-discoverability ui-search-item__group__element::text').get()
+            'brand':products.css('span.ui-search-item__brand-discoverability.ui-search-item__group__element::text').get()
             }
 
-        pass
+        
